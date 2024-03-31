@@ -1,0 +1,16 @@
+s <- c(0, 1);
+
+n = 10000;
+resultados = c()
+gap = 50;
+
+for (i in seq(25, n, gap)) {
+  muestra = sample(x = s, size = i, replace = TRUE)
+  resultados <- append(resultados, mean(muestra))
+  
+  
+}
+
+plot(x = seq(1, n, gap), y = resultados, type = "l")
+
+
